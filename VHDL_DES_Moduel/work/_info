@@ -1,0 +1,365 @@
+m255
+K3
+13
+cModel Technology
+dD:\altera\13.0sp1
+Pdes_def
+Z0 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 w1578406083
+Z6 dC:\Users\tai75\OneDrive\Desktop\Project
+Z7 8DES/DES_def.vhd
+Z8 FDES/DES_def.vhd
+l0
+L6
+V8ASA]VF?oI4EJV7ZSDnh41
+Z9 OV;C;10.1d;51
+32
+b1
+Z10 !s108 1578510848.407000
+Z11 !s90 -reportprogress|300|DES/DES_def.vhd|
+Z12 !s107 DES/DES_def.vhd|
+o-O0
+Z13 tExplicit 1
+!s100 5bLZM1HCoV[[L9c]OC3O@3
+!i10b 1
+Bbody
+Z14 DPx4 work 7 des_def 0 22 8ASA]VF?oI4EJV7ZSDnh41
+Z15 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R1
+R2
+R3
+R4
+l0
+L125
+Vd:1h@MJW00C0dc8LU2dVG3
+R9
+32
+R10
+R11
+R12
+o-O0
+R13
+nbody
+!s100 ;7JP?9?I41aEj7NMlgVPc2
+!i10b 1
+Edes_module
+Z16 w1578406172
+R1
+R2
+R14
+R15
+R3
+R4
+R6
+Z17 8DES/DES_module.vhd
+Z18 FDES/DES_module.vhd
+l0
+L7
+V3?0EJ8R06@MSMRnS:8zmQ0
+R9
+32
+Z19 !s108 1578510848.554000
+Z20 !s90 -reportprogress|300|DES/DES_module.vhd|
+Z21 !s107 DES/DES_module.vhd|
+o-O0
+R13
+!s100 hXL2?PMML03ai8`DLU=bY0
+!i10b 1
+Abehavior
+R1
+R2
+R14
+R15
+R3
+R4
+Z22 DEx4 work 10 des_module 0 22 3?0EJ8R06@MSMRnS:8zmQ0
+l23
+L18
+Vj3jWHO036d_51;]Mbcl^X2
+!s100 bCZd1O?CS4]kYkKX2d1cF2
+R9
+32
+R19
+R20
+R21
+o-O0
+R13
+!i10b 1
+Edestb
+Z23 w1578509349
+R15
+R3
+R4
+R6
+Z24 8DES/DesTb.vhd
+Z25 FDES/DesTb.vhd
+l0
+L8
+V@@<SWZlfl@]PKf9`FV8dh0
+!s100 oPhJ8k[L<@mBaJ?oHo92L1
+R9
+32
+!i10b 1
+Z26 !s108 1578510848.686000
+Z27 !s90 -reportprogress|300|DES/DesTb.vhd|
+Z28 !s107 DES/DesTb.vhd|
+o-O0
+R13
+Asim
+R1
+R2
+R14
+R22
+R15
+R3
+R4
+Z29 DEx4 work 5 destb 0 22 @@<SWZlfl@]PKf9`FV8dh0
+l20
+L11
+Z30 V2^W[M=]kJI0MbT``^FZ=?0
+Z31 !s100 C`>cz0e=kcWUCTaQC9gT_3
+R9
+32
+!i10b 1
+R26
+R27
+R28
+o-O0
+R13
+Efreq_div3
+Z32 w1577805222
+R1
+R2
+R3
+R4
+Z33 dE:\College\Senior\Digital System Design\final_project\Project
+Z34 8E:/College/Senior/Digital System Design/final_project/Project/Freq_Div/Freq_Div3.vhd
+Z35 FE:/College/Senior/Digital System Design/final_project/Project/Freq_Div/Freq_Div3.vhd
+l0
+L5
+VgE_1T;oB_Q5<;6c>[Sn]z2
+R9
+32
+Z36 !s108 1578398538.378000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/College/Senior/Digital System Design/final_project/Project/Freq_Div/Freq_Div3.vhd|
+Z38 !s107 E:/College/Senior/Digital System Design/final_project/Project/Freq_Div/Freq_Div3.vhd|
+Z39 o-work work -2002 -explicit -O0
+R13
+!s100 Z0Ao5H9e`M[_M?RG=aDYF0
+!i10b 1
+Abehavior
+R1
+R2
+R3
+R4
+DEx4 work 9 freq_div3 0 22 gE_1T;oB_Q5<;6c>[Sn]z2
+l18
+L13
+VQ2]ml02TzJY77^Dz:ND^<2
+R9
+32
+R36
+R37
+R38
+R39
+R13
+!s100 njIl<[PmJPUjSbJb4[J?e1
+!i10b 1
+Efreq_divtb
+Z40 w1577933798
+R15
+R3
+R4
+R33
+Z41 8E:/College/Senior/Digital System Design/final_project/Project/Freq_Div/Freq_DivTb.vhd
+Z42 FE:/College/Senior/Digital System Design/final_project/Project/Freq_Div/Freq_DivTb.vhd
+l0
+L5
+VI[em;KEPeS<zI9=_l?4dh0
+R9
+32
+Z43 !s108 1578398538.698000
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/College/Senior/Digital System Design/final_project/Project/Freq_Div/Freq_DivTb.vhd|
+Z45 !s107 E:/College/Senior/Digital System Design/final_project/Project/Freq_Div/Freq_DivTb.vhd|
+R39
+R13
+!s100 lUCi>[7R`@m:SOGkzX@eM0
+!i10b 1
+Asim
+R15
+R3
+R4
+DEx4 work 10 freq_divtb 0 22 I[em;KEPeS<zI9=_l?4dh0
+l23
+L8
+V<T>2WXLgXQNLQ;6:H90d:0
+R9
+32
+R43
+R44
+R45
+R39
+R13
+!s100 mS>cA3bUdG;WeHF0NWX3E2
+!i10b 1
+Elcd_demo
+Z46 w1578124458
+R1
+R2
+R3
+R4
+R33
+Z47 8E:/College/Senior/Digital System Design/final_project/Project/LCD/LCD_Demo.vhd
+Z48 FE:/College/Senior/Digital System Design/final_project/Project/LCD/LCD_Demo.vhd
+l0
+L9
+VZfk84ofiL[EX7Hb?YjEHb0
+R9
+32
+Z49 !s108 1578398537.804000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/College/Senior/Digital System Design/final_project/Project/LCD/LCD_Demo.vhd|
+Z51 !s107 E:/College/Senior/Digital System Design/final_project/Project/LCD/LCD_Demo.vhd|
+R39
+R13
+!s100 cd3UB16giWdQ;0?`XA]kG0
+!i10b 1
+Abehavior
+R1
+R2
+R3
+R4
+DEx4 work 8 lcd_demo 0 22 Zfk84ofiL[EX7Hb?YjEHb0
+l47
+L21
+VfCDa`RUgKl0JH1aQNSPQg0
+R9
+32
+R49
+R50
+R51
+R39
+R13
+!s100 d<0=mFSSm5HHTAeVbmI8J3
+!i10b 1
+Elcd_i_d_out1
+Z52 w1577859706
+R1
+R2
+R3
+R4
+R33
+Z53 8E:/College/Senior/Digital System Design/final_project/Project/LCD/LCD_I_D_out1.vhd
+Z54 FE:/College/Senior/Digital System Design/final_project/Project/LCD/LCD_I_D_out1.vhd
+l0
+L9
+VXEGh>YN=f4hkPTId;HOYY1
+R9
+32
+Z55 !s108 1578398538.099000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/College/Senior/Digital System Design/final_project/Project/LCD/LCD_I_D_out1.vhd|
+Z57 !s107 E:/College/Senior/Digital System Design/final_project/Project/LCD/LCD_I_D_out1.vhd|
+R39
+R13
+!s100 @PLJGaE`gCoA?SN?U3MNm0
+!i10b 1
+Aarch
+R1
+R2
+R3
+R4
+DEx4 work 12 lcd_i_d_out1 0 22 XEGh>YN=f4hkPTId;HOYY1
+l26
+L22
+V5a=<YQ0z><lH9>lO?kfAc0
+R9
+32
+R55
+R56
+R57
+R39
+R13
+!s100 4KfAA]HJWH5C1S[7VIg6X0
+!i10b 1
+Estatemachine
+Z58 w1578324058
+R15
+R1
+R2
+R3
+R4
+R33
+Z59 8E:/College/Senior/Digital System Design/final_project/Project/StateMachine/StateMachine.vhd
+Z60 FE:/College/Senior/Digital System Design/final_project/Project/StateMachine/StateMachine.vhd
+l0
+L8
+V3_^W38;zOjOYAkV=DRfS43
+R9
+32
+Z61 !s108 1578398538.971000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/College/Senior/Digital System Design/final_project/Project/StateMachine/StateMachine.vhd|
+Z63 !s107 E:/College/Senior/Digital System Design/final_project/Project/StateMachine/StateMachine.vhd|
+R39
+R13
+!s100 ^oBF^T_o>PQ;;?M2[a15S3
+!i10b 1
+Abehavior
+R15
+R1
+R2
+R3
+R4
+DEx4 work 12 statemachine 0 22 3_^W38;zOjOYAkV=DRfS43
+l82
+L25
+Vai0[a@Z<[OYigaYM;]f^L3
+R9
+32
+R61
+R62
+R63
+R39
+R13
+!s100 kS;kaSk<Uc?j3Rz3NK=;91
+!i10b 1
+Estatemachinetb
+Z64 w1577724944
+R15
+R3
+R4
+R33
+Z65 8E:/College/Senior/Digital System Design/final_project/Project/StateMachineTb.vhd
+Z66 FE:/College/Senior/Digital System Design/final_project/Project/StateMachineTb.vhd
+l0
+L7
+VObB0[K^Y`341;<YIk9IJ`3
+R9
+32
+Z67 !s108 1577725119.496000
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|E:/College/Senior/Digital System Design/final_project/Project/StateMachineTb.vhd|
+Z69 !s107 E:/College/Senior/Digital System Design/final_project/Project/StateMachineTb.vhd|
+R39
+R13
+!s100 BZAl?G0Sb_K`2W]??AM;73
+!i10b 1
+Asim
+DEx4 work 12 statemachine 0 22 POe23DFKZEb@K>?jYDTEh3
+R15
+R3
+R4
+DEx4 work 14 statemachinetb 0 22 ObB0[K^Y`341;<YIk9IJ`3
+l21
+L10
+VX]9:;;MBn`WzU4P^FkWmV2
+R9
+32
+R67
+R68
+R69
+R39
+R13
+!s100 TCQ>^R;;8b9:f=obOnK[f2
+!i10b 1

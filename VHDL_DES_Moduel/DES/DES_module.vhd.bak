@@ -1,0 +1,85 @@
+LIBRARY IEEE;
+    USE IEEE.std_logic_1164.all;
+    USE IEEE.numeric_std.all;
+LIBRARY work;
+    USE work.Des_def.all;
+
+ENTITY DES_module IS
+    PORT (
+                Clk : in std_logic;                       -- Clock use to synchronize
+                 En : in std_logic;                       -- Calculate enable
+             ED_Sel : in std_logic;                       -- Encryption(0) Decryption(1)
+              Input : in std_logic_vector( 1 to 64 ); -- Input Text for de or encryption 
+                Key : in std_logic_vector( 1 to 64 ); -- Symmetric Key for de or encryption
+             Output : out std_logic_vector( 1 to 64 ) -- process result
+    );
+END ENTITY;
+
+ARCHITECTURE BEHAVIOR OF DES_module IS
+    Constant En_cntr_limit : integer := 5;   -- Enable count limit
+    Constant Round_limit : integer := 16;    -- Encrypt and Decrypt round limit
+    Signal Input_Text : std_logic_vector( 1 to 64 );
+    Signal Output_Text : std_logic_vector( 1 to 64 );
+BEGIN
+    -- Input initial permutation
+    IP: FOR I IN Input'left TO Input'right GENERATE
+        P: Input_Text(I) <= Input(IP_Table(I));
+    END GENERATE;
+
+    -- Output initial permutation inverse
+    IP_INV: FOR I IN Output'left TO Output'right GENERATE
+        P_I: Output(I) <= Output_Text(IP_Inv_Table(I));
+    END GENERATE;
+
+    Des_Process: PROCESS( Clk, EN ) IS
+        Variable En_cntr     : integer := 0;     -- Enable count
+        Variable Round       : integer := 0;     -- Encrypt and Decrypt Round
+        Variable LE : std_logic_vector( 1 to 32 ) := (others => '0'); -- Left half Text
+        Variable RE : std_logic_vector( 1 to 32 ) := (others => '0'); -- Right half Text
+        Variable Next_RE : std_logic_vector( 1 to 32 ) := (others => '0'); -- Next Right half Text
+        Variable LK : std_logic_vector( 1 to 28 ) := (others => '0'); -- Left half key
+        Variable RK : std_logic_vector( 1 to 28  ) := (others => '0'); -- Right half key
+        Variable Second_Key : std_logic_vector( 1 to 48 ) := (others => '0'); -- Temporary store key
+        Variable Temp_Key : std_logic_vector( 1 to 56 ) := (others => '0'); -- Temporary store key
+    BEGIN
+        IF rising_edge( Clk ) THEN           -- Sychronize with clock
+            IF EN = '0' THEN -- Ensure input data are available
+                En_cntr := En_cntr + 1;
+            ELSE
+                En_cntr := 0;
+            END IF;
+
+            IF En_cntr = En_cntr_limit THEN
+                -- Cryption start
+                
+                -- Initial Process
+                LE := Input_Text( 1 to 32 );
+                RE := Input_Text( 33 to 64 );
+
+                -- Choice Key
+                LK := Permuation_Choice1( Key, Left_PC );
+                RK := Permuation_Choice1( Key, Right_PC );
+
+                -- Round
+                FOR I IN 1 TO Round_limit LOOP
+                    IF ED_Sel = '0' THEN -- Encrypt rotate left
+                        LK := LK(LK'left + Round_Shift(I) to LK'right) & LK(LK'left to Round_Shift(I));
+                        RK := RK(RK'left + Round_Shift(I) to RK'right) & RK(RK'left to Round_Shift(I));
+                    ELSIF ED_Sel = '1' THEN                 -- Decrypt rotate right
+                        LK := LK( LK'right - Round_Shift(17-I+1) + 1  to LK'right ) & LK( LK'left to LK'right - Round_Shift(17-I+1) );
+                        RK := RK( RK'right - Round_Shift(17-I+1) + 1  to RK'right ) & RK( RK'left to RK'right - Round_Shift(17-I+1) );
+                    END IF;
+                    Temp_Key := LK & RK;
+                    Second_Key := Permuation_Choice2( Temp_Key, Key_Permu );
+                    Next_RE := Crypt_Process( RE, Second_Key ) XOR LE;
+                    LE := RE;
+                    RE := Next_RE;
+                END LOOP;
+
+                -- Output result
+                En_cntr := 0;
+                Output_Text <= RE & LE;
+            END IF;
+        END IF;
+    END PROCESS Des_Process;
+END BEHAVIOR;

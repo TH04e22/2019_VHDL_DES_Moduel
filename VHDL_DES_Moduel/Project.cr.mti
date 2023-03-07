@@ -1,0 +1,38 @@
+{E:/College/Senior/Digital System Design/final_project/Project/DES/DES_module.vhd} {1 {vcom -work work -2002 -explicit {E:\College\Senior\Digital System Design\final_project\Project\DES\DES_module.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package DES_def
+-- Compiling entity DES_module
+-- Compiling architecture BEHAVIOR of DES_module
+
+} {} {}} {E:/College/Senior/Digital System Design/final_project/Project/DES/DES_def.vhd} {1 {vcom -work work -2002 -explicit {E:\College\Senior\Digital System Design\final_project\Project\DES\DES_def.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling package DES_def
+-- Compiling package body DES_def
+-- Loading package DES_def
+
+} {} {}} {E:/College/Senior/Digital System Design/final_project/Project/DES/DesTb.vhd} {1 {vcom -work work -2002 -explicit {E:/College/Senior/Digital System Design/final_project/Project/DES/DesTb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity DesTb
+-- Compiling architecture SIM of DesTb
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package DES_def
+-- Loading entity DES_module
+
+} {} {}}

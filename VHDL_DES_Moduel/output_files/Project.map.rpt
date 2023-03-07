@@ -1,0 +1,597 @@
+Analysis & Synthesis report for Project
+Thu Jan 09 03:18:16 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Project|StateMachine:inst|L_Last_State
+  9. State Machine - |Project|StateMachine:inst|M_State
+ 10. State Machine - |Project|StateMachine:inst|L_State
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jan 09 03:18:16 2020            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; Project                                          ;
+; Top-level Entity Name              ; Project                                          ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 5,202                                            ;
+;     Total combinational functions  ; 5,114                                            ;
+;     Dedicated logic registers      ; 554                                              ;
+; Total registers                    ; 554                                              ;
+; Total pins                         ; 42                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F896C6       ;                    ;
+; Top-level entity name                                                      ; Project            ; Project            ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
+; Project.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/tai75/OneDrive/Desktop/Project/Project.bdf                   ;         ;
+; StateMachine/StateMachine.vhd    ; yes             ; User VHDL File                     ; C:/Users/tai75/OneDrive/Desktop/Project/StateMachine/StateMachine.vhd ;         ;
+; LCD/LCD_I_D_out1.vhd             ; yes             ; User VHDL File                     ; C:/Users/tai75/OneDrive/Desktop/Project/LCD/LCD_I_D_out1.vhd          ;         ;
+; Freq_Div/Freq_Div3.vhd           ; yes             ; User VHDL File                     ; C:/Users/tai75/OneDrive/Desktop/Project/Freq_Div/Freq_Div3.vhd        ;         ;
+; debounce.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/tai75/OneDrive/Desktop/Project/debounce.bdf                  ;         ;
+; DES/DES_module.vhd               ; yes             ; User VHDL File                     ; C:/Users/tai75/OneDrive/Desktop/Project/DES/DES_module.vhd            ;         ;
+; DES/DES_def.vhd                  ; yes             ; User VHDL File                     ; C:/Users/tai75/OneDrive/Desktop/Project/DES/DES_def.vhd               ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                           ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Estimated Total logic elements              ; 5,202                   ;
+;                                             ;                         ;
+; Total combinational functions               ; 5114                    ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 3967                    ;
+;     -- 3 input functions                    ; 658                     ;
+;     -- <=2 input functions                  ; 489                     ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 5030                    ;
+;     -- arithmetic mode                      ; 84                      ;
+;                                             ;                         ;
+; Total registers                             ; 554                     ;
+;     -- Dedicated logic registers            ; 554                     ;
+;     -- I/O registers                        ; 0                       ;
+;                                             ;                         ;
+; I/O pins                                    ; 42                      ;
+; Embedded Multiplier 9-bit elements          ; 0                       ;
+; Maximum fan-out node                        ; Freq_Div3:inst5|F16F[6] ;
+; Maximum fan-out                             ; 430                     ;
+; Total fan-out                               ; 20495                   ;
+; Average fan-out                             ; 3.59                    ;
++---------------------------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                  ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+; |Project                   ; 5114 (0)          ; 554 (0)      ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |Project                     ; work         ;
+;    |DES_module:inst1|      ; 4399 (4399)       ; 96 (96)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project|DES_module:inst1    ; work         ;
+;    |Freq_Div3:inst5|       ; 18 (18)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project|Freq_Div3:inst5     ; work         ;
+;    |LCD_I_D_out1:inst14|   ; 19 (19)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project|LCD_I_D_out1:inst14 ; work         ;
+;    |StateMachine:inst|     ; 674 (674)         ; 413 (413)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project|StateMachine:inst   ; work         ;
+;    |debounce:inst6|        ; 1 (1)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project|debounce:inst6      ; work         ;
+;    |debounce:inst7|        ; 1 (1)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project|debounce:inst7      ; work         ;
+;    |debounce:inst8|        ; 1 (1)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project|debounce:inst8      ; work         ;
+;    |debounce:inst9|        ; 1 (1)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project|debounce:inst9      ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Project|StateMachine:inst|L_Last_State                                                                                                                                                            ;
++------------------------------+------------------------------+------------------------+-------------------------+------------------------+-----------------------+--------------------------+-----------------------+
+; Name                         ; L_Last_State.LCD_Prompt_Line ; L_Last_State.LCD_Clear ; L_Last_State.LCD_Delete ; L_Last_State.LCD_Input ; L_Last_State.LCD_Stay ; L_Last_State.LCD_Execute ; L_Last_State.LCD_Init ;
++------------------------------+------------------------------+------------------------+-------------------------+------------------------+-----------------------+--------------------------+-----------------------+
+; L_Last_State.LCD_Init        ; 0                            ; 0                      ; 0                       ; 0                      ; 0                     ; 0                        ; 0                     ;
+; L_Last_State.LCD_Execute     ; 0                            ; 0                      ; 0                       ; 0                      ; 0                     ; 1                        ; 1                     ;
+; L_Last_State.LCD_Stay        ; 0                            ; 0                      ; 0                       ; 0                      ; 1                     ; 0                        ; 1                     ;
+; L_Last_State.LCD_Input       ; 0                            ; 0                      ; 0                       ; 1                      ; 0                     ; 0                        ; 1                     ;
+; L_Last_State.LCD_Delete      ; 0                            ; 0                      ; 1                       ; 0                      ; 0                     ; 0                        ; 1                     ;
+; L_Last_State.LCD_Clear       ; 0                            ; 1                      ; 0                       ; 0                      ; 0                     ; 0                        ; 1                     ;
+; L_Last_State.LCD_Prompt_Line ; 1                            ; 0                      ; 0                       ; 0                      ; 0                     ; 0                        ; 1                     ;
++------------------------------+------------------------------+------------------------+-------------------------+------------------------+-----------------------+--------------------------+-----------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Project|StateMachine:inst|M_State                                                                                                       ;
++-----------------------+--------------+-----------------+-----------------------+-----------------+-------------------+--------------------+--------------+
+; Name                  ; M_State.Show ; M_State.Decrypt ; M_State.Input_Decrypt ; M_State.Encrypt ; M_State.Input_Key ; M_State.Input_Text ; M_State.Init ;
++-----------------------+--------------+-----------------+-----------------------+-----------------+-------------------+--------------------+--------------+
+; M_State.Init          ; 0            ; 0               ; 0                     ; 0               ; 0                 ; 0                  ; 0            ;
+; M_State.Input_Text    ; 0            ; 0               ; 0                     ; 0               ; 0                 ; 1                  ; 1            ;
+; M_State.Input_Key     ; 0            ; 0               ; 0                     ; 0               ; 1                 ; 0                  ; 1            ;
+; M_State.Encrypt       ; 0            ; 0               ; 0                     ; 1               ; 0                 ; 0                  ; 1            ;
+; M_State.Input_Decrypt ; 0            ; 0               ; 1                     ; 0               ; 0                 ; 0                  ; 1            ;
+; M_State.Decrypt       ; 0            ; 1               ; 0                     ; 0               ; 0                 ; 0                  ; 1            ;
+; M_State.Show          ; 1            ; 0               ; 0                     ; 0               ; 0                 ; 0                  ; 1            ;
++-----------------------+--------------+-----------------+-----------------------+-----------------+-------------------+--------------------+--------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Project|StateMachine:inst|L_State                                                                                                                         ;
++-------------------------+-------------------------+-------------------+--------------------+-------------------+------------------+---------------------+------------------+
+; Name                    ; L_State.LCD_Prompt_Line ; L_State.LCD_Clear ; L_State.LCD_Delete ; L_State.LCD_Input ; L_State.LCD_Stay ; L_State.LCD_Execute ; L_State.LCD_Init ;
++-------------------------+-------------------------+-------------------+--------------------+-------------------+------------------+---------------------+------------------+
+; L_State.LCD_Init        ; 0                       ; 0                 ; 0                  ; 0                 ; 0                ; 0                   ; 0                ;
+; L_State.LCD_Execute     ; 0                       ; 0                 ; 0                  ; 0                 ; 0                ; 1                   ; 1                ;
+; L_State.LCD_Stay        ; 0                       ; 0                 ; 0                  ; 0                 ; 1                ; 0                   ; 1                ;
+; L_State.LCD_Input       ; 0                       ; 0                 ; 0                  ; 1                 ; 0                ; 0                   ; 1                ;
+; L_State.LCD_Delete      ; 0                       ; 0                 ; 1                  ; 0                 ; 0                ; 0                   ; 1                ;
+; L_State.LCD_Clear       ; 0                       ; 1                 ; 0                  ; 0                 ; 0                ; 0                   ; 1                ;
+; L_State.LCD_Prompt_Line ; 1                       ; 0                 ; 0                  ; 0                 ; 0                ; 0                   ; 1                ;
++-------------------------+-------------------------+-------------------+--------------------+-------------------+------------------+---------------------+------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                 ;
++-------------------------------------------------------------------------------------------+--------------------------------------------------------+
+; Register name                                                                             ; Reason for Removal                                     ;
++-------------------------------------------------------------------------------------------+--------------------------------------------------------+
+; StateMachine:inst|LCD_Line_Begin[1]                                                       ; Merged with StateMachine:inst|LCD_Line_Begin[0]        ;
+; StateMachine:inst|First_Line[1..4,6,7,79,80,83,87,95,98,103,106,111,113,119,125,127]      ; Merged with StateMachine:inst|First_Line[0]            ;
+; StateMachine:inst|Second_Line[0..4,6..12,14..20,22..28,30..36,38..44,46..52,54..60,62,63] ; Merged with StateMachine:inst|First_Line[0]            ;
+; StateMachine:inst|First_Line[5,77,93,99,109,110,117,118,126]                              ; Merged with StateMachine:inst|First_Line[101]          ;
+; StateMachine:inst|Second_Line[5,13,21,29,37,45,53,61]                                     ; Merged with StateMachine:inst|First_Line[101]          ;
+; StateMachine:inst|First_Line[74,89,91]                                                    ; Merged with StateMachine:inst|First_Line[124]          ;
+; StateMachine:inst|First_Line[97,123]                                                      ; Merged with StateMachine:inst|First_Line[107]          ;
+; StateMachine:inst|First_Line[92,122]                                                      ; Merged with StateMachine:inst|First_Line[105]          ;
+; StateMachine:inst|First_Line[120,121]                                                     ; Merged with StateMachine:inst|First_Line[108]          ;
+; StateMachine:inst|First_Line[90]                                                          ; Merged with StateMachine:inst|First_Line[115]          ;
+; StateMachine:inst|First_Line[114]                                                         ; Merged with StateMachine:inst|First_Line[104]          ;
+; StateMachine:inst|First_Line[85]                                                          ; Merged with StateMachine:inst|First_Line[112]          ;
+; StateMachine:inst|First_Line[84,86,94]                                                    ; Merged with StateMachine:inst|First_Line[102]          ;
+; StateMachine:inst|First_Line[73,76,81,88]                                                 ; Merged with StateMachine:inst|First_Line[116]          ;
+; StateMachine:inst|First_Line[78,82,96]                                                    ; Merged with StateMachine:inst|First_Line[72]           ;
+; StateMachine:inst|First_Line[0]                                                           ; Stuck at GND due to stuck port data_in                 ;
+; StateMachine:inst|First_Line[101]                                                         ; Stuck at VCC due to stuck port data_in                 ;
+; StateMachine:inst|First_Line[107]                                                         ; Merged with StateMachine:inst|First_Line[102]          ;
+; StateMachine:inst|First_Line[124]                                                         ; Merged with StateMachine:inst|First_Line[112]          ;
+; StateMachine:inst|First_Line[104]                                                         ; Merged with StateMachine:inst|First_Line[116]          ;
+; StateMachine:inst|L_Last_State.LCD_Stay                                                   ; Merged with StateMachine:inst|L_Last_State.LCD_Execute ;
+; StateMachine:inst|L_Last_State.LCD_Execute                                                ; Stuck at GND due to stuck port data_in                 ;
+; Freq_Div3:inst5|F16F[7..15]                                                               ; Lost fanout                                            ;
+; StateMachine:inst|RW                                                                      ; Stuck at GND due to stuck port data_in                 ;
+; StateMachine:inst|LCD_Line_Begin[0]                                                       ; Stuck at GND due to stuck port data_in                 ;
+; Total Number of Removed Registers = 133                                                   ;                                                        ;
++-------------------------------------------------------------------------------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 554   ;
+; Number of registers using Synchronous Clear  ; 50    ;
+; Number of registers using Synchronous Load   ; 7     ;
+; Number of registers using Asynchronous Clear ; 7     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 471   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; StateMachine:inst|Submit_Buffer[1]     ; 8       ;
+; StateMachine:inst|Submit_Buffer[0]     ; 9       ;
+; StateMachine:inst|LCD_En               ; 38      ;
+; StateMachine:inst|Input_Buffer[1]      ; 3       ;
+; StateMachine:inst|Delete_Buffer[1]     ; 2       ;
+; StateMachine:inst|Delete_Buffer[0]     ; 3       ;
+; StateMachine:inst|Input_Buffer[0]      ; 4       ;
+; StateMachine:inst|Clear_Buffer[1]      ; 2       ;
+; StateMachine:inst|Clear_Buffer[0]      ; 3       ;
+; Total number of inverted registers = 9 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 8:1                ; 7 bits    ; 35 LEs        ; 7 LEs                ; 28 LEs                 ; Yes        ; |Project|LCD_I_D_out1:inst14|LCD_wait_cntr[4] ;
+; 6:1                ; 56 bits   ; 224 LEs       ; 56 LEs               ; 168 LEs                ; Yes        ; |Project|StateMachine:inst|Key[50]            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |Project|StateMachine:inst|Des_Clock_Cntr[26] ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Project|StateMachine:inst|First_Line[124]    ;
+; 8:1                ; 64 bits   ; 320 LEs       ; 128 LEs              ; 192 LEs                ; Yes        ; |Project|StateMachine:inst|Plain_Text[18]     ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |Project|StateMachine:inst|First_Line[107]    ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |Project|StateMachine:inst|First_Line[116]    ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |Project|StateMachine:inst|First_Line[108]    ;
+; 8:1                ; 52 bits   ; 260 LEs       ; 104 LEs              ; 156 LEs                ; Yes        ; |Project|StateMachine:inst|First_Line[13]     ;
+; 8:1                ; 49 bits   ; 245 LEs       ; 49 LEs               ; 196 LEs                ; Yes        ; |Project|StateMachine:inst|Second_Line[66]    ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Project|StateMachine:inst|LCD_Line_Begin[2]  ;
+; 10:1               ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |Project|StateMachine:inst|First_Line[57]     ;
+; 10:1               ; 15 bits   ; 90 LEs        ; 30 LEs               ; 60 LEs                 ; Yes        ; |Project|StateMachine:inst|Second_Line[107]   ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 4 LEs                ; 14 LEs                 ; Yes        ; |Project|StateMachine:inst|Input_Cntr[2]      ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Project|StateMachine:inst|User_Input[52]     ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Project|StateMachine:inst|User_Input[59]     ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Project|StateMachine:inst|User_Input[36]     ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Project|StateMachine:inst|User_Input[40]     ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Project|StateMachine:inst|User_Input[23]     ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Project|StateMachine:inst|User_Input[29]     ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Project|StateMachine:inst|User_Input[6]      ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Project|StateMachine:inst|User_Input[12]     ;
+; 22:1               ; 5 bits    ; 70 LEs        ; 15 LEs               ; 55 LEs                 ; Yes        ; |Project|StateMachine:inst|Ins_Execntr[0]     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Project|StateMachine:inst|L_State            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux93               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux75               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux74               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux306              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux39               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux132              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux16               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux57               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux115              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux403              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux214              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux227              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux228              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux151              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux267              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux192              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux174              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux286              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux385              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux384              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux249              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux619              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux347              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux444              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux327              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux367              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux422              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux712              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux522              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux540              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux539              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux463              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux580              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux502              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux484              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux599              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux692              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux694              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux557              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux928              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux656              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux751              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux636              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux679              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux735              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1024             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux832              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux847              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux848              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux774              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux890              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux811              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux791              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux906              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1005             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1003             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux868              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1239             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux967              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1064             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux949              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux989              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1043             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1334             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1144             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1160             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1158             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1082             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1199             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1123             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1104             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1218             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1312             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1313             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1177             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1548             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1278             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1373             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1259             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1297             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1353             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1642             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1453             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1467             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1469             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1392             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1510             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1433             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1414             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1527             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1622             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1623             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1490             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1857             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1588             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1684             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1568             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1609             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1664             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1953             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1763             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1777             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1779             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1701             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1818             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1744             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1723             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1836             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1932             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1933             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1797             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2167             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1899             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1992             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1878             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1919             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux1975             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2264             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2074             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2090             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2088             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2014             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2127             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2053             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2033             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2303             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2107             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2226             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2149             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2323             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2283             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2207             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2245             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2243             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2420             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2189             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2457             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2384             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2476             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2437             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2361             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2397             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2398             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Project|DES_module:inst1|Mux2344             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |Project|StateMachine:inst|M_State            ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |Project|StateMachine:inst|M_State            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 28 LEs               ; 42 LEs                 ; No         ; |Project|StateMachine:inst|L_Last_State       ;
+; 14:1               ; 5 bits    ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; No         ; |Project|StateMachine:inst|L_State            ;
+; 26:1               ; 2 bits    ; 34 LEs        ; 14 LEs               ; 20 LEs                 ; No         ; |Project|StateMachine:inst|L_State            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:02:25     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Jan 09 03:15:35 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project -c Project
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file project.bdf
+    Info (12023): Found entity 1: Project
+Info (12021): Found 2 design units, including 1 entities, in source file statemachine/statemachine.vhd
+    Info (12022): Found design unit 1: StateMachine-BEHAVIOR
+    Info (12023): Found entity 1: StateMachine
+Info (12021): Found 2 design units, including 1 entities, in source file lcd/lcd_i_d_out1.vhd
+    Info (12022): Found design unit 1: LCD_I_D_out1-ARCH
+    Info (12023): Found entity 1: LCD_I_D_out1
+Info (12021): Found 2 design units, including 1 entities, in source file freq_div/freq_div3.vhd
+    Info (12022): Found design unit 1: Freq_Div3-BEHAVIOR
+    Info (12023): Found entity 1: Freq_Div3
+Info (12021): Found 1 design units, including 1 entities, in source file debounce.bdf
+    Info (12023): Found entity 1: debounce
+Info (12021): Found 2 design units, including 1 entities, in source file des/des_module.vhd
+    Info (12022): Found design unit 1: DES_module-BEHAVIOR
+    Info (12023): Found entity 1: DES_module
+Info (12021): Found 2 design units, including 0 entities, in source file des/des_def.vhd
+    Info (12022): Found design unit 1: DES_def
+    Info (12022): Found design unit 2: DES_def-body
+Info (12127): Elaborating entity "Project" for the top level hierarchy
+Info (12128): Elaborating entity "LCD_I_D_out1" for hierarchy "LCD_I_D_out1:inst14"
+Warning (10492): VHDL Process Statement warning at LCD_I_D_out1.vhd(35): signal "RS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LCD_I_D_out1.vhd(36): signal "RW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "Freq_Div3" for hierarchy "Freq_Div3:inst5"
+Info (12128): Elaborating entity "StateMachine" for hierarchy "StateMachine:inst"
+Warning (10631): VHDL Process Statement warning at StateMachine.vhd(84): inferring latch(es) for signal or variable "Reset", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Reset" at StateMachine.vhd(84)
+Info (12128): Elaborating entity "debounce" for hierarchy "debounce:inst6"
+Info (12128): Elaborating entity "DES_module" for hierarchy "DES_module:inst1"
+Warning (10445): VHDL Subtype or Type Declaration warning at DES_module.vhd(69): subtype or type has null range
+Warning (10445): VHDL Subtype or Type Declaration warning at DES_module.vhd(70): subtype or type has null range
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "LCD_I_D_out1:inst14|DB_io[7]" to the node "LCD_I_D_out1:inst14|Mux0" into an OR gate
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "LCD_I_D_out1:inst14|RSo" is converted into an equivalent circuit using register "LCD_I_D_out1:inst14|RSo~_emulated" and latch "LCD_I_D_out1:inst14|RSo~1"
+    Warning (13310): Register "LCD_I_D_out1:inst14|RWS" is converted into an equivalent circuit using register "LCD_I_D_out1:inst14|RWS~_emulated" and latch "LCD_I_D_out1:inst14|RWS~1"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LCD_On" is stuck at VCC
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 5263 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 5221 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4683 megabytes
+    Info: Processing ended: Thu Jan 09 03:18:16 2020
+    Info: Elapsed time: 00:02:41
+    Info: Total CPU time (on all processors): 00:02:17
+
+
